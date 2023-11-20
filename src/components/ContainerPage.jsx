@@ -50,7 +50,7 @@ function ContainerPage() {
             const resp = await fetch(`https://ce.judge0.com/languages/all`);
             const lngs = await resp.json();
             setLanguages(lngs);
-            handleLanguageChange(71);
+            setLanguage(lngs[0]);
         })();
     }, []);
 

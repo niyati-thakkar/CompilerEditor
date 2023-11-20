@@ -133,7 +133,7 @@ function ContainerPage() {
         }
     };
     const handleOutput = async () => {
-        console.log("https://judge0-ce.p.rapidapi.com/submissions/" + token);
+        // console.log("https://judge0-ce.p.rapidapi.com/submissions/" + token);
         const options = {
             method: "GET",
             url: "https://judge0-ce.p.rapidapi.com/submissions/" + token,
@@ -150,7 +150,7 @@ function ContainerPage() {
 
         try {
             const response = await axios.request(options);
-            console.log(response.data);
+            // console.log(response.data);
             setOutput(base64_decode(response.data.stdout===null?response.data.stderr:response.data.stdout));
             setOutputDetails(response.data);
         } catch (error) {

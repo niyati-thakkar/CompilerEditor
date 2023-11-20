@@ -103,7 +103,7 @@ function ContainerPage() {
 
         try {
             const response = await axios.request(options);
-            console.log(response.data.token);
+            // console.log(response.data.token);
             setToken(response.data.token);
             // checkStatus();
             handleOutput();
